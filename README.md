@@ -8,6 +8,8 @@ Puzzles can be found [here](https://adventofcode.com/2022/)
 
 | Day | Part | Execution Time |
 | --- | ---- | -------------- |
-| 1 | 1 | 8 ms|
+| 1 | 1 | 6 ms|
 | 1 | 2 | 1 ms|
-||total|9 ms|
+| 2 | 1 | 2 ms|
+| 2 | 2 | 1 ms|
+||total|12 ms|

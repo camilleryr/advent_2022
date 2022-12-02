@@ -77,6 +77,7 @@ defmodule Mix.Tasks.GenPuzzle do
         "\\g{1}\n",
         global: true
       )
+      |> String.replace("\n", "\n\n")
       |> PhoenixHtmlSanitizer.Helpers.sanitize(:strip_tags)
 
     result
