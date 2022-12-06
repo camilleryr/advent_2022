@@ -141,9 +141,9 @@ defmodule Day5 do
   defp apply_instructions_2(state, instruction) do
     {to, from} = Enum.split(state[instruction.from], instruction.move)
 
-      state
-      |> Map.put(instruction.from, from)
-      |> Map.update!(instruction.to, &Enum.concat(to, &1))
+    state
+    |> Map.put(instruction.from, from)
+    |> Map.update!(instruction.to, &Enum.concat(to, &1))
   end
 
   defp parse(stream_input) do
