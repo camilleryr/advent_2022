@@ -7,6 +7,8 @@ defmodule Mix.Tasks.GenTimeTable do
 
   @shortdoc "Generate a markdown table of execution times and add it to the READEME file"
   def run(_) do
+    Mix.env(:test)
+
     header = """
     ****\n
     Advent Of Code 2022 Execution Times (in ms)\n

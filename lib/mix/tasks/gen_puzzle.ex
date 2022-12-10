@@ -53,9 +53,24 @@ defmodule Mix.Tasks.GenPuzzle do
 
       ## Example
 
-        iex> part_1()
+        iex> part_1(test_input(:part_1))
       \"\"\"
       def_solution part_1(stream_input) do
+        stream_input
+      end
+
+      @doc ~S\"\"\"
+      ## Example
+
+        iex> part_2(test_input(:part_1))
+      \"\"\"
+      def_solution part_2(stream_input) do
+        stream_input
+      end
+
+      def test_input(:part_1) do
+        \"\"\"
+        \"\"\"
       end
     end
     """
