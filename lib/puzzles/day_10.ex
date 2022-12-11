@@ -218,8 +218,7 @@ defmodule Day10 do
   end
 
   defp render_row(states) do
-    0..239
-    |> Enum.map(fn n ->
+    Enum.map(0..239, fn n ->
       sprite_position = Map.get(states, n, 1)
       pixel_position = rem(n, 40)
 
