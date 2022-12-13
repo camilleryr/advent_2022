@@ -21,6 +21,7 @@ defmodule Elixir.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:jason, "~> 1.1"},
       {:phoenix_html_sanitizer, "~> 1.1"},
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false}
       # {:dep_from_hexpm, "~> 0.3.0"},
