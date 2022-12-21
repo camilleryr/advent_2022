@@ -48,6 +48,7 @@ defmodule Advent2022 do
   def print_grid(map, opts \\ []) do
     transformer = Keyword.get(opts, :transformer, & &1)
     output_file = Keyword.get(opts, :output_file)
+    dir = Keyword.get(opts, :dir, :normal)
 
     {{_x, max_y}, _} = Enum.max_by(map, fn {{_x, y}, _} -> y end)
     {{max_x, _y}, _} = Enum.max_by(map, fn {{x, _y}, _} -> x end)
@@ -57,7 +58,7 @@ defmodule Advent2022 do
 
     IO.puts("---------------------------------------")
 
-    for y <- min_y..max_y, x <- min_x..max_x do
+    for y <- range(dir, min_y, max_y), x <- min_x..max_x do
       if z = map[{x, y}], do: transformer.(z), else: "-"
     end
     |> Enum.chunk_every(max_x - min_x + 1)
@@ -72,4 +73,7 @@ defmodule Advent2022 do
 
     IO.puts("---------------------------------------")
   end
+
+  defp range(:normal, min, max), do: min..max
+  defp range(_, min, max), do: max..min
 end
