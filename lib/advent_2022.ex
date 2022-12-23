@@ -59,7 +59,7 @@ defmodule Advent2022 do
     IO.puts("---------------------------------------")
 
     for y <- range(dir, min_y, max_y), x <- min_x..max_x do
-      if z = map[{x, y}], do: transformer.(z), else: "-"
+      transformer.(map[{x, y}]) || "-"
     end
     |> Enum.chunk_every(max_x - min_x + 1)
     |> Enum.map(&Enum.join/1)
