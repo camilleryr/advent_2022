@@ -17,7 +17,7 @@ defmodule Advent2022 do
     end
   end
 
-  def stream(path_or_string, opts) do
+  def stream(path_or_string, opts \\ []) do
     preserve_newlines = Keyword.get(opts, :preserve_newlines, false)
 
     if String.ends_with?(path_or_string, ".txt") do
